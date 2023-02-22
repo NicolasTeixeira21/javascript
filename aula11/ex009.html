@@ -15,11 +15,15 @@
     </div>
     <script>
         function Checar() {
-            var pais = window.document.getElementById('txtp')
+            var pais = window.document.querySelector('txtp')
+            var p1 = txtp.value
             var res = window.document.querySelector('div#res')
-            res.innerHTML = `O seu País é ${pais}` 
-            if (pais != 'Brasil') {
-                res.innerHTML = 'Você é gringo'
+            res.innerHTML = `O seu País é <strong>${p1}</strong>` 
+
+            if (p1 == 'Brasil') {
+                res.innerHTML += '<p>Você é brasileiro</p>'
+            } else {
+                res.innerHTML += '<p>Você é gringo</p>'
             }
             
         }
